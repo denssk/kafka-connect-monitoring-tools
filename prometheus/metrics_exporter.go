@@ -54,7 +54,6 @@ func PublishPrometheusMetrics(writer http.ResponseWriter, req *http.Request) {
 
 func RetrievePrometheusMetrics() {
   kafkaConnectHostString := os.Getenv("KAFKA_CONNECT_URL")
-  schemaRegistryHostString := os.Getenv("SCHEMA_REGISTRY_URL")
   metricsRefreshRate, err := strconv.ParseInt(os.Getenv("METRICS_REFRESH_RATE"), 10, 32)
 
   if err != nil {
